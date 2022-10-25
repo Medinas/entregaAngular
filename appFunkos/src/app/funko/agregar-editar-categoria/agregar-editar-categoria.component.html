@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <h1>Agregar/Editar categoría</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="formulario" autocomplete="off" (ngSubmit)="guardar()">
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Nombre categoría: </mat-label>
+                    <input matInput formControlName="descCategoria"  />
+                </mat-form-field>
+                <div *ngIf="(descCategoria?.dirty || descCategoria?.touched) && descCategoria?.errors">
+                    <mat-error *ngIf="descCategoria?.errors?.['required']">
+                        El nombre de la categoría es requerida.
+                    </mat-error><!-- Esto es para regresar el error -->
+                    <mat-error *ngIf="descCategoria?.errors?.['minlength']">
+                        El nombre de la categoría debe contener al menos 5 caracteres.
+                    </mat-error>
+                    <mat-error *ngIf="descCategoria?.errors?.['maxlength']">
+                        El nombre de la categoría no debe superar los 100 caracteres.
+                    </mat-error>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button mat-raised-button color="primary" type="submit" 
+                [disabled]="formulario.invalid" class="me-5">
+                    Guardar <mat-icon>save</mat-icon>
+                </button>
+                <button mat-raised-button color="secondary" type="button" 
+                [routerLink]="['/categorias']">
+                    Regresar <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

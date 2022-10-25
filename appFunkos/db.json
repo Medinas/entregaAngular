@@ -1,0 +1,36 @@
+{
+  "categorias": [
+    {
+      "descCategoria": "Batman",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "descCategoria": "Harry potter"
+    },
+    {
+      "descCategoria": "Star wars",
+      "id": 3
+    },
+    {
+      "descCategoria": "Disney",
+      "id": 4
+    }
+  ],
+  "funkos": [
+    {
+      "id": 1,
+      "nombre": "",
+      "numero": "01",
+      "tipo": "Regular",
+      "categoria": "Batman"
+    }
+  ],
+  "users": [
+    {
+      "email": "carol@hotmail.com",
+      "password": "$2a$10$j.tzmt3.BfB5zVVlvST6feEWb9/s9mkzK9uv29n.PO7DDYS.5ahi.",
+      "id": 1
+    }
+  ]
+}
